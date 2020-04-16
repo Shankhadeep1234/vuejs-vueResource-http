@@ -22,7 +22,7 @@
             v-for="(user, index) in users"
             :key="index"
           >
-            {{ user.userName }} -- {{ user.email }}
+            {{ user.userName }} - {{ user.email }}
           </li>
         </ul>
       </div>
@@ -44,7 +44,7 @@ export default {
   methods: {
     submit() {
       this.$http
-        .post('https://vuejs-http-a11f4.firebaseio.com/data.json', this.user)
+        .post('', this.user)
         .then((response) => {
           console.log(response);
         })
